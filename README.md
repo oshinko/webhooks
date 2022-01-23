@@ -29,3 +29,9 @@ Develop:
 ```sh
 flask run --port 8000 --reload
 ```
+
+PowerShell スクリプトファイルの改行コードは CRLF でないとならない:
+
+```dos
+git config core.autocrlf true
+```
