@@ -14,3 +14,9 @@ def echo(message):
 def shutdown():
     subprocess.run('shutdown /s /t 10', shell=True)
     return '', 204
+
+
+@app.route('/suspend', methods=['POST'])
+def suspend():
+    subprocess.run('start rundll32.exe PowrProf.dll,SetSuspendState', shell=True)
+    return '', 204
